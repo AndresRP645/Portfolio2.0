@@ -108,6 +108,27 @@
   width: 90%;
 }
 
+.console {
+  padding: 5rem;
+  width: 50%;
+}
+
+.console-text {
+  font-size: 2.25rem;
+}
+
+@media (max-width: 1023px) {
+  .console {
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .console-text {
+    font-size: 1rem !important;
+  }
+
+}
+
 /* GENERAL COLORS */
 :root {
   --black: #000000;

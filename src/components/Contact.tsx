@@ -206,14 +206,14 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
           </motion.div>
         </div>
         <div className="flex flex-row justify-center items-start px-32 pt-32 mb-32 max-lg:flex-col max-lg:p-10">
-          <div className="w-1/2  bg-[--darkblue] text-[--white] flex flex-col justify-center items-start gap-24 rounded-2xl p-20 border-solid border-[0.4rem] border-[--lightblue] hover:border-purple duration-500 transition-all  quote-outer-container text-left max-lg:hidden cursor-progress">
+          <div className="bg-[--darkblue] text-[--white] flex flex-col justify-center items-start gap-24 rounded-2xl border-solid border-[0.4rem] border-[--lightblue] hover:border-purple duration-500 transition-all  quote-outer-container text-left console cursor-progress">
             <Highlight
               code={codeSnippet}
               language="tsx"
               theme={themes.synthwave84}
             >
               {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                <pre className={`${className} text-4xl `} style={style}>
+                <pre className={`${className} console-text`} style={style}>
                   {tokens.map((line, i) => (
                     <div {...getLineProps({ line, key: i })}>
                       <div className="message-contact">
