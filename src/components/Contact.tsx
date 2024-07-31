@@ -40,7 +40,10 @@ const Contact: React.FC = () => {
     const data = new FormData(e.currentTarget);
 
     try {
+      
       const response = await axios.post(apiBaseUrl, data);
+
+
       console.log(response);
       if (language === "ES") {
         toast.success(toastMessages.successEmailSent.es);
@@ -228,7 +231,6 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
             className="flex flex-col gap-6 justify-center items-center  px-32 w-1/2 max-lg:w-full max-lg:p-10"
             onSubmit={notifySentForm}
             autoComplete="off"
-            netlify
           >
             {contactData.inputfields.map((input, index) => (
               <input
