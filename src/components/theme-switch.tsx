@@ -77,7 +77,7 @@ export default function ThemeSwitch() {
         aria-label="My Github Profile"
       >
         <Link
-          to={sideBarLeftSocials[1].link}
+          to={sideBarLeftSocials[3].link}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -102,7 +102,7 @@ export default function ThemeSwitch() {
         aria-label="My Linkedin Profile"
       >
         <Link
-          to={sideBarLeftSocials[0].link}
+          to={sideBarLeftSocials[6].link}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -129,7 +129,7 @@ export default function ThemeSwitch() {
         aria-label="Send me an Email"
       >
         <Link
-          to={sideBarLeftSocials[2].link}
+          to={sideBarLeftSocials[5].link}
           target="_blank"
           rel="noopener noreferrer"
         >
