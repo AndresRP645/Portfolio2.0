@@ -176,26 +176,41 @@ const ProjectSlider: React.FC = () => {
                 className="bg-darkblue flex flex-col gap-10 w-[80%] h-full  border-lightblue border-[0.4rem] p-8 rounded-xl mb-10 min-[1024px]:hidden max-lg:w-[90%]"
               >
                 <h2 className="text-white">{project.title}</h2>
-                <img
-                  src={project.image}
-                  alt={project.image}
-                  className="h-[35vh] w-full object-cover object-top rounded-3xl"
-                />
+                {
+                    project.image != "" ?
+                    <div className="right-content relative h-[40rem] overflow-hidden rounded-xl w-[40%] transition-all duration-200 shadow-2xl">
+                    <img
+                      src={project.image}
+                      alt={`${project.title}-project-mockup`}
+                      className={`w-full h-auto transition-all duration-[6000ms] transform opacity-100 hover:translate-y-[-50%] 
+                      `}
+                    />
+                  </div>
+                  : <></>
+                  }
                 <div className="buttons flex gap-10 max-lg:flex-col">
-                  <Button
-                    label={language === "ES" ? project.deploymentbutton : project.deploymentbutton_EN}
-                    link={project.deploymenturl}
-                    iconSVG={FiLink}
-                    buttoncolor={project.colors.main}
-                    iconcolor={project.colors.icon}
-                  />
-                  <Button
-                    label={language === "ES" ? "Repositorio en Github" : "Github Repository"}
-                    link={project.githuburl}
-                    iconSVG={FiGithub}
-                    buttoncolor={project.colors.main}
-                    iconcolor={project.colors.icon}
-                  />
+                { project.deploymenturl != "" ?
+                        <Button
+                        label={language === "ES" ? project.deploymentbutton : project.deploymentbutton_EN}
+                        link={project.deploymenturl}
+                        iconSVG={FiLink}
+                        buttoncolor={project.colors.main}
+                        iconcolor={project.colors.icon}
+                        onClick={notifyServerRequest}
+                        target= {project.title == "Artículo" ? "_blank" : ""}
+                        />
+                      : <></>
+                      }
+                 { project.githuburl != "" ?
+                        <Button
+                        label={language === "ES" ? "Repositorio en Github" : "Github Repository"}
+                        link={project.githuburl}
+                        iconSVG={FiGithub}
+                        buttoncolor={project.colors.main}
+                        iconcolor={project.colors.icon}
+                        />
+                      : <></>
+                      }
                 </div>
                 <p className="text-white  max-lg:text-4xl">
                   {language === "ES"
