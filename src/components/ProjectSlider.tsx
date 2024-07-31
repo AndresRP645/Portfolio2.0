@@ -175,7 +175,7 @@ const ProjectSlider: React.FC = () => {
                 key={index}
                 className="bg-darkblue flex flex-col gap-10 w-[80%] h-full  border-lightblue border-[0.4rem] p-8 rounded-xl mb-10 min-[1024px]:hidden max-lg:w-[90%]"
               >
-                <h2 className="text-white">{project.title}</h2>
+                <h2 className="text-white">{language === "ES" ? project.title : project.title_EN}</h2>
                 {
                     project.image != "" ?
                     <div className="right-content relative h-[40rem] overflow-hidden rounded-xl w-[40%] transition-all duration-200 shadow-2xl">
