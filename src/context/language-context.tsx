@@ -1,6 +1,6 @@
 import { useEffect, useState, createContext, useContext } from "react";
 
-type language = "EN" | "ES";
+type language = "ES" | "EN";
 
 type LanguageContextProviderProps = {
   children: React.ReactNode;
@@ -16,7 +16,7 @@ const LanguageContext = createContext<LanguageContextType | null>(null);
 export default function LanguageContextProvider({
   children,
 }: LanguageContextProviderProps) {
-  const [language, setLanguage] = useState<language>("EN");
+  const [language, setLanguage] = useState<language>("ES");
 
   const toggleLanguage = () => {
     if (language === "EN") {
