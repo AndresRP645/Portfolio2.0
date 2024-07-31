@@ -178,7 +178,7 @@ const ProjectSlider: React.FC = () => {
                 <h2 className="text-white">{language === "ES" ? project.title : project.title_EN}</h2>
                 {
                     project.image != "" ?
-                    <div className="right-content relative h-[40rem] overflow-hidden rounded-xl w-[40%] transition-all duration-200 shadow-2xl">
+                    <div className="right-content relative h-[40rem] overflow-hidden rounded-xl transition-all duration-200 shadow-2xl">
                     <img
                       src={project.image}
                       alt={`${project.title}-project-mockup`}
