@@ -16,7 +16,7 @@ import { FiLink } from "react-icons/fi";
 const Certifications: React.FC = () => {
   const progressCircle = useRef<SVGSVGElement | null>(null);
   const progressContent = useRef<HTMLSpanElement | null>(null);
-  const { ref } = useSectionInView("Courses and certifications");
+  const { ref } = useSectionInView("Courses and Certifications");
   const { language } = useLanguage();
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({

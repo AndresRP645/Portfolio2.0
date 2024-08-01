@@ -461,7 +461,7 @@ export const navLinks = [
   { es: "Inicio", en: "Home", hash: "#home", icon: GoHome },
   { es: "Skills", en: "Skills", hash: "#skills", icon: GoStack },
   { es: "Proyectos", en: "Projects", hash: "#projects", icon: GoProject },
-  { es: "Cursos y Certificaciones", en: "Courses and certifications", hash: "#certifications", icon: GoPerson },
+  { es: "Cursos y Certificaciones", en: "Courses and Certifications", hash: "#certifications", icon: GoPerson },
   { es: "Contacto", en: "Contact", hash: "#contact", icon: GoMail },
 ] as const;
 
